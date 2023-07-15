@@ -1,0 +1,13 @@
+services:
+  api_prod:
+    environment:
+      - DATABASE_URL
+      - JWT_SECRET
+      - FRONTEND_URL
+
+    container_name: coup_dpouce_api_production
+    image: goodcollect/api:production
+    restart: always
+    ports:
+      - 8002:8000
+      - 8001:8001

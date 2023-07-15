@@ -1,0 +1,13 @@
+services:
+  api_staging:
+    environment:
+      - DATABASE_URL
+      - JWT_SECRET
+      - FRONTEND_URL
+
+    container_name: coup_dpouce_api_staging
+    image: goodcollect/api:latest
+    restart: always
+    ports:
+      - 8010:8000
+      - 8011:8001

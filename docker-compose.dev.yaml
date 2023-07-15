@@ -1,0 +1,16 @@
+services:
+  api_staging:
+    environment:
+      - DATABASE_URL
+      - JWT_SECRET
+      - FRONTEND_URL
+
+    container_name: coup_dpouce_api_dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: goodcollect/api:latest
+    restart: always
+    ports:
+      - 8020:8000
+      - 8021:8001
